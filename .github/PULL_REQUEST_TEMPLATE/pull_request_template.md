@@ -13,6 +13,7 @@ A clear and concise description of the overall goal(s) of the pull request's com
 ### Checklist
 - [ ] Tests changes
 - [ ] Docs changes
+- [ ] Changelog changes in CHANGELOG.md under `[Unreleased]` section
 
 ### Changes
 
