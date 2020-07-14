@@ -1,4 +1,18 @@
+---
+title: '[Bug/Feature/Infra](#Issue-Number): Message'
+labels: ''
+assignees: ''
+
+---
+
 For issue: [issue-number-of-github-issue-with-#-as-prefix (e.g. #N)]
+
+### Description
+A clear and concise description of the overall goal(s) of the pull request's commits.
+
+### Checklist
+- [ ] Tests changes
+- [ ] Docs changes
 
 ### Changes
 
