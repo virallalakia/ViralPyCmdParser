@@ -1,6 +1,6 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: Report a bug
+about: Report a bug in the project/lib to help us improve
 title: ''
 labels: ''
 assignees: ''
@@ -29,4 +29,4 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Additional information**
-Add any other context about the problem here.
+Add any other information about the problem here.
