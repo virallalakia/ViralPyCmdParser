@@ -1,7 +1,5 @@
 ---
-title: '[Bug/Feature/Infra](#Issue-Number): Message'
-labels: ''
-assignees: ''
+title: 'Bug/Feature/Infra(#Issue-Number): Message'
 
 ---
 
