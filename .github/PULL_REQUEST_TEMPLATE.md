@@ -1,7 +1,7 @@
----
-title: 'Bug/Feature/Infra(#Issue-Number): Message'
+### *Take these notes & Remove this section*
+* Format of the PR title: `[Bug/Feature/Docs/Infra](#Issue-Number): Message`
 
----
+----
 
 Resolves issue: [issue-number-of-github-issue-with-#-as-prefix (e.g. #N)]
 
