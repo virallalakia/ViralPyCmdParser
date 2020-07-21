@@ -1,9 +1,10 @@
-<h1 align="center">ViralPyCmdParser</h1>
-<p align="center">A utility to parse command and arguments for Python.</p>
+# [VL]
+## ViralPyCmdParser
+A utility to parse command and arguments for Python.
 
-![](https://github.com/virallalakia/ViralPyCmdParser/workflows/build/badge.svg) [![](https://img.shields.io/github/license/virallalakia/ViralPyCmdParser)][LICENSE]
+[![](https://img.shields.io/github/license/virallalakia/ViralPyCmdParser)][LICENSE]
 
-## Attribution
+### Attribution
 #### Versioning
 The versioning of this project adheres to the guidelines provided by [Semantic Versioning](https://semver.org/spec/v2.0.0.html#semantic-versioning-200).
 #### Changelog
