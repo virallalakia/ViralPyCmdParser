@@ -1,24 +1,9 @@
-name: Basic
+name: Test
 
 on: [push, pull_request]
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-      - name: Lint
-        run: |
-          pip install pre-commit
-          pre-commit run --all-files
-
   test:
-    needs: lint
     name: Test on ${{ matrix.os }} with Python ${{ matrix.python-version }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -48,6 +33,10 @@ jobs:
       - name: Install dependencies
         shell: bash
         run: poetry install
+
+      - name: Lint
+        shell: bash
+        run: pre-commit run --all-files
 
       - name: Run pytest
         shell: bash
