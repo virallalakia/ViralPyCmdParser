@@ -3,6 +3,7 @@
 A utility to parse command and arguments for Python.
 
 [![](https://img.shields.io/github/license/virallalakia/ViralPyCmdParser)][LICENSE]
+[![test](https://github.com/virallalakia/ViralPyCmdParser/workflows/test/badge.svg)](#)
 
 ### Attribution
 #### Versioning
