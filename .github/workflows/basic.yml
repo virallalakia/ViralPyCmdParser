@@ -1,0 +1,54 @@
+name: Basic
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Lint
+        run: |
+          pip install pre-commit
+          pre-commit run --all-files
+
+  test:
+    needs: lint
+    name: Test on ${{ matrix.os }} with Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.8]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Read full Python version
+        id: full-python-version
+        shell: bash
+        run: echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
+
+      - name: Install pip and poetry
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          pip install --user poetry
+
+      - name: Install dependencies
+        shell: bash
+        run: poetry install
+
+      - name: Run pytest
+        shell: bash
+        run: poetry run pytest -q tests
