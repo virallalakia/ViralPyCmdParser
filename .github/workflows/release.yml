@@ -51,13 +51,13 @@ jobs:
 
       - name: Build project for distribution
         shell: bash
-        run: poetry run
+        run: poetry build
 
       - name: Publish to PyPI
         shell: bash
         env:
           POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_TOKEN }}
-        run: poetry run poetry publish
+        run: poetry publish
 
       - name: Upload release sdist asset
         uses: actions/upload-release-asset@v1.0.1
