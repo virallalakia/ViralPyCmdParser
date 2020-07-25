@@ -6,4 +6,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Add support to parse basic command format with arguments (#7) (#8)
+- Add support to parse basic command format with arguments (Issue: [#7](https://github.com/virallalakia/ViralPyCmdParser/issues/7)) (PR: [#8](https://github.com/virallalakia/ViralPyCmdParser/pull/8))
