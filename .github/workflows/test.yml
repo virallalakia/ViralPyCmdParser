@@ -18,7 +18,8 @@ jobs:
         python-version: [3.8]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
@@ -63,4 +64,11 @@ jobs:
 
       - name: Run pytest
         shell: bash
-        run: poetry run pytest -q tests
+        run: poetry run pytest -q --cov-report=xml --cov=viralpycmdparser tests
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage.xml
+          fail_ci_if_error: true
